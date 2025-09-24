@@ -1,0 +1,18 @@
+[project]
+name = "openai-community-mcp"
+version = "0.1.0"
+description = "MCP server exposing the OpenAI Community (Discourse) API via Streamable HTTP."
+authors = [{ name = "Codex" }]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]",
+    "uvicorn",
+    "starlette",
+    "httpx",
+]
+
+[project.scripts]
+openai-community-mcp = "server:main"
+
+[tool.uv]
+python = "3.12"
